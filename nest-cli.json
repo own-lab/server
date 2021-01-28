@@ -1,0 +1,84 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/ms-registry/src",
+  "monorepo": true,
+  "root": "apps/ms-registry",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/ms-registry/tsconfig.app.json"
+  },
+  "projects": {
+    "ms-registry": {
+      "type": "application",
+      "root": "apps/ms-registry",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-registry/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-registry/tsconfig.app.json"
+      }
+    },
+    "ms-users": {
+      "type": "application",
+      "root": "apps/ms-users",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-users/tsconfig.app.json"
+      }
+    },
+    "ms-roles": {
+      "type": "application",
+      "root": "apps/ms-roles",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-roles/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-roles/tsconfig.app.json"
+      }
+    },
+    "ms-authentication": {
+      "type": "application",
+      "root": "apps/ms-authentication",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-authentication/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-authentication/tsconfig.app.json"
+      }
+    },
+    "ms-authorization": {
+      "type": "application",
+      "root": "apps/ms-authorization",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-authorization/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-authorization/tsconfig.app.json"
+      }
+    },
+    "core": {
+      "type": "library",
+      "root": "libs/core",
+      "entryFile": "index",
+      "sourceRoot": "libs/core/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core/tsconfig.lib.json"
+      }
+    },
+    "shared": {
+      "type": "library",
+      "root": "libs/shared",
+      "entryFile": "index",
+      "sourceRoot": "libs/shared/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/shared/tsconfig.lib.json"
+      }
+    },
+    "ms-container-manager": {
+      "type": "application",
+      "root": "apps/ms-container-manager",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-container-manager/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-container-manager/tsconfig.app.json"
+      }
+    }
+  }
+}
